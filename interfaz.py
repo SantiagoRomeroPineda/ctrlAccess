@@ -46,6 +46,8 @@ def hablar(frase):
     myobj.save("frase.mp3")
     os.system("mpg321 frase.mp3")
 
+
+
 def cambio():
     global estado
 
