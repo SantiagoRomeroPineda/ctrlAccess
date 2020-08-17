@@ -1,21 +1,26 @@
 import tkinter as tk
-import time
-# import datetime
-# import sqlite3
-# import sensorLibD6T as temperatura
-# import audios as audios
-# import psutil
-# import os
-# import RPi.GPIO as GPIO
+from modelo import *
+import datetime
+import RPi.GPIO as GPIO
 
 
-root = tk.Tk()
+
 
 def configurarPulsadores():
     #pulsadores config
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_UP)
     GPIO.setup(16, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+
+
+def getFecha():
+    return datetime.datetime.today() 
+def getParidadFecha():
+    return getFecha().day%2 == 0
+
+
+root = tk.Tk()
+
 
 def getRoot():
     global root
@@ -53,6 +58,8 @@ estado=0
 def evento():
     global estado
     print("hola")
+    conexion= Modelo()
+    print(conexion.getUsuario("1026304116"))
 
 
 getRoot().mainloop()
