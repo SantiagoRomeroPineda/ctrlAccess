@@ -6,17 +6,12 @@ import os
 i2c_ch = 1
 
 
-
-
-
 # TMP102 address on the I2C bus
 i2c_address = 0x0A
 
 # Register addresses
 reg_temp = 0x4C
 reg_config = 0x01
-
-
 
 
 # Read temperature registers and calculate Celsius
