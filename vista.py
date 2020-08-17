@@ -49,17 +49,15 @@ def getRoot():
     return root
 
 
-
-
-
 estado=0
-
 
 def evento():
     global estado
-    print("hola")
-    conexion= Modelo()
-    print(conexion.getUsuario("1026304116"))
+    if estado==0:
+        
+        
+
+        estado=1
 
 
 getRoot().mainloop()

@@ -175,11 +175,11 @@ def cambio():
             root.update()
             os.system("mpg321 menorEdad.mp3")
         estado=0
-    entry.delete(0,"end")
-    texto="Bienvenido.\nPor favor presente su documento en el lector"
-    myLabel1.config(text=texto )
-    myLabel2.config(text="")
-    root.update()
+        entry.delete(0,"end")
+        texto="Bienvenido.\nPor favor presente su documento en el lector"
+        myLabel1.config(text=texto )
+        myLabel2.config(text="")
+        root.update()
 
 
 
