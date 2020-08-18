@@ -58,7 +58,7 @@ def getTexto(genero, nombres):
 
 
 def validarEdad(genero):
-    if texto[5] == '0':
+    if genero == '0':
         return True
     return False
 
@@ -123,7 +123,7 @@ def evento():
             data["permiso"] = getPulsador()
             if data["permiso"] == 0 and validarEdad(data["genero"]):
                 myLabel1.config(
-                    text="eres menor de edad, no se te permite ingresar")
+                    text="Eres menor de edad. No se te permite ingresar.")
                 root.update()
                 estado = 0
                 os.system("mpg321 menorEdad.mp3")
@@ -136,7 +136,7 @@ def evento():
             }
         if resultado["permiso"] == 0 and validarFecha(data["documento"]):
             myLabel1.config(
-                text="Lo sentimos.\nHoy no tienes permitido ingresar.\nTe esperamos mañana")
+                text="Lo sentimos.\nHoy no tienes permitido ingresar.\nTe esperamos mañana.")
             root.update()
             estado = 0
             os.system("mpg321 diaNoIngreso.mp3")
