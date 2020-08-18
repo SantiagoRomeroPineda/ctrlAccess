@@ -2,7 +2,7 @@ import sqlite3
 
 class Modelo(object):
     def __init__(self):
-        self.conn= sqlite3.connect('/home/pi/Documents/proyectos/proyectoSL_update/ctrlAccess/tablas.db')
+        self.conn= sqlite3.connect('/home/pi/Documents/proyectos/proyectoSL/db/tablas.db')
         self.conn.row_factory= sqlite3.Row
 
     def closeConection(self):
